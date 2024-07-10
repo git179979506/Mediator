@@ -10,33 +10,17 @@ Pod::Spec.new do |s|
   s.name             = 'Mediator'
   s.version          = '0.1.0'
   s.summary          = 'A short description of Mediator.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'A long description of Mediator.'
 
   s.homepage         = 'https://github.com/zhaoshouwen/Mediator'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhaoshouwen' => 'zsw19911017@163.com' }
   s.source           = { :git => 'https://github.com/zhaoshouwen/Mediator.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://juejin.cn/user/4265760847569166'
 
   s.ios.deployment_target = '10.0'
+  s.swift_versions = ['4.2', '5.0']
 
   s.source_files = 'Mediator/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'Mediator' => ['Mediator/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

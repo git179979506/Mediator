@@ -1,13 +1,37 @@
+# 同时加载业务库和Interface，在同一仓库内，保证版本同步
+def podWithInterface(name = nil, *requirements)
+  unless name
+    raise StandardError, "A dependency requires a name."
+  end
+
+  pod name, *requirements
+  pod "#{name}Interface", *requirements
+end
+
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '12.0'
 
 target 'Mediator_Example' do
+  # Plan 和 PlanInterface 在同一git仓库内，保持版本同步
+  podWithInterface 'Plan', :path => '../RemotePods/PlanRepository' # :git => '', :commit => ''
+  podWithInterface 'Portfolio', :path => '../RemotePods/PortfolioRepository' # :git => '', :commit => ''
+  podWithInterface 'Community', :path => '../RemotePods/CommunityRepository' # :git => '', :commit => ''
+  
+  pod 'Home', :path => '../RemotePods/Home'
+  pod 'Base', :path => '../RemotePods/Base'
+  
   pod 'Mediator', :path => '../'
+  
+  # 三方库版本在 Base 库中管理，不支持 :git
+  # 也可选择在Podflie中维护
+#  pod 'TableViewSections', '0.1.0'
+#  pod 'PageState', '0.2.0'
+#  pod 'SnapKit', '~> 5.7.0'
 
   target 'Mediator_Tests' do
     inherit! :search_paths
-
+    
     
   end
 end

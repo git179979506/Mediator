@@ -1,0 +1,86 @@
+PODS:
+  - Base (0.1.0):
+    - PageState (= 0.2.0)
+    - SnapKit (~> 5.7.0)
+    - TableViewSections (= 0.1.0)
+  - Community (0.1.0):
+    - Base
+    - CommunityInterface
+  - CommunityInterface (0.1.0):
+    - Base
+    - Mediator
+  - Home (0.1.0):
+    - Base
+    - PlanInterface
+  - Mediator (0.1.0)
+  - PageState (0.2.0)
+  - Plan (0.1.0):
+    - Base
+    - CommunityInterface
+    - PlanInterface
+    - PortfolioInterface
+  - PlanInterface (0.1.0):
+    - Mediator
+  - Portfolio (0.1.0):
+    - Base
+    - PlanInterface
+    - PortfolioInterface
+  - PortfolioInterface (0.1.0):
+    - Mediator
+  - SnapKit (5.7.1)
+  - TableViewSections (0.1.0)
+
+DEPENDENCIES:
+  - Base (from `../RemotePods/Base`)
+  - Community (from `../RemotePods/CommunityRepository`)
+  - CommunityInterface (from `../RemotePods/CommunityRepository`)
+  - Home (from `../RemotePods/Home`)
+  - Mediator (from `../`)
+  - Plan (from `../RemotePods/PlanRepository`)
+  - PlanInterface (from `../RemotePods/PlanRepository`)
+  - Portfolio (from `../RemotePods/PortfolioRepository`)
+  - PortfolioInterface (from `../RemotePods/PortfolioRepository`)
+
+SPEC REPOS:
+  trunk:
+    - PageState
+    - SnapKit
+    - TableViewSections
+
+EXTERNAL SOURCES:
+  Base:
+    :path: "../RemotePods/Base"
+  Community:
+    :path: "../RemotePods/CommunityRepository"
+  CommunityInterface:
+    :path: "../RemotePods/CommunityRepository"
+  Home:
+    :path: "../RemotePods/Home"
+  Mediator:
+    :path: "../"
+  Plan:
+    :path: "../RemotePods/PlanRepository"
+  PlanInterface:
+    :path: "../RemotePods/PlanRepository"
+  Portfolio:
+    :path: "../RemotePods/PortfolioRepository"
+  PortfolioInterface:
+    :path: "../RemotePods/PortfolioRepository"
+
+SPEC CHECKSUMS:
+  Base: ecca45ed9d00b98a07cac7dcc09e14052f4f2746
+  Community: b0b8f5dc4f5858ddb00ec69a3a3f86e61a2f1fa7
+  CommunityInterface: 01f713cd13bfcfffedb5a384073ec3c153f47dc8
+  Home: 59e5dfc218afed3039225bfa336e8024da5bd8b1
+  Mediator: c21ace84cf749ae06654356cfea72b875a077f1e
+  PageState: 45544d8406eb48c7f9b5ce4d5e149732101b7e14
+  Plan: f2be59217dba015d1cc65626b28e9db7fe70333d
+  PlanInterface: deeac42c8c6040a499e894935d3cc886736e4bc4
+  Portfolio: e416300c78466a3424e60886f6ea2c8cf7a67ba9
+  PortfolioInterface: 9a4feea9b4aac09a9a78e7d6d58ca95a28af398e
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  TableViewSections: 13fc2e319572aa967b16ed63e01df60ded2ac910
+
+PODFILE CHECKSUM: 9897d6603a8f6fdd18567d598b2f51077ccf4de7
+
+COCOAPODS: 1.13.0
